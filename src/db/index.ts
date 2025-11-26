@@ -81,6 +81,10 @@ export async function withTestDatabase(
 
   assert.ok(_testDatabase, "Test database not initialized. This should not happen in test mode.");
 
+  // Ensure migrations are run before each test to avoid schema issues
+  // when using transactions. This is a no-op if migrations are already applied.
+  await runMigrations(_testDatabase);
+
   return _testDatabase.transaction(async (tx) => {
     const dbInstance = tx as unknown as DatabaseInstance;
     return testDatabaseContext.run({ db: dbInstance }, async () => {
