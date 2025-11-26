@@ -6,7 +6,8 @@ for rapid development with minimal dependencies and a straightforward architectu
 ## Features
 
 - **Hono** - Fast web framework with server-side JSX templating
-- **Bun** - Runtime, package manager, and test runner
+- **Bun** - Package manager
+- **Node.js** - Runtime
 - **HTMX** - Client-side interactivity without a JavaScript framework
 - **Drizzle ORM** - Type-safe SQLite database with migrations
 - **Tailwind CSS** - Utility-first CSS framework

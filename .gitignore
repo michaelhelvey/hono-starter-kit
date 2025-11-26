@@ -37,3 +37,12 @@ TODO.md
 generated/
 db.sqlite
 db.sqlite-journal
+
+test-results
+coverage
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/

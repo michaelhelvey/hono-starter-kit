@@ -11,6 +11,8 @@
     "dev": "run-p dev:relay dev:app",
     "test": "vitest",
     "build:css": "postcss src/globals.css -o public/generated/globals.css",
+    "e2e:setup": "bunx playwright install",
+    "test:e2e": "bunx playwright test",
     "db:nuke": "rm -f db.sqlite db.sqlite-journal && rm -rf drizzle && npm run db:generate && npm run db:migrate",
     "db:push": "drizzle-kit push",
     "db:generate": "drizzle-kit generate",
@@ -42,6 +44,7 @@
   "devDependencies": {
     "@eslint/js": "9.39.1",
     "@happy-dom/global-registrator": "20.0.10",
+    "@playwright/test": "^1.57.0",
     "@tailwindcss/postcss": "4.1.17",
     "@testing-library/dom": "10.4.1",
     "@testing-library/jest-dom": "6.9.1",
