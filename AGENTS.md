@@ -1,10 +1,10 @@
 ## commands
 
-- `bun run test --run` - run all tests (vitest)
-- `bun run test path/to/file.test.ts --run` - run single test file
-- `bun lint` - lint with eslint
-- `bun run dev` - start dev server on localhost:3000
-- `bun run test:e2e` - run e2e tests (playwright)
+- `npm run test --run` - run all tests (vitest)
+- `npm run test path/to/file.test.ts --run` - run single test file
+- `npm lint` - lint with eslint
+- `npm run dev` - start dev server on localhost:3000
+- `npm run test:e2e` - run e2e tests (playwright)
 
 ## code style
 

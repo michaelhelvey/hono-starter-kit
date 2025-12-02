@@ -1,13 +1,11 @@
 # Hono Starter Kit
 
-A simple fullstack TypeScript starter template built with Hono, Bun, and server-side JSX. Designed
-for rapid development with minimal dependencies and a straightforward architecture.
+A simple fullstack TypeScript starter template built with Hono, Node.js, and server-side JSX.
+Designed for rapid development with minimal dependencies and a straightforward architecture.
 
 ## Features
 
 - **Hono** - Fast web framework with server-side JSX templating
-- **Bun** - Package manager
-- **Node.js** - Runtime
 - **HTMX** - Client-side interactivity without a JavaScript framework
 - **Drizzle ORM** - Type-safe SQLite database with migrations
 - **Tailwind CSS** - Utility-first CSS framework
@@ -21,12 +19,12 @@ for rapid development with minimal dependencies and a straightforward architectu
 
 ### Prerequisites
 
-- [Bun](https://bun.sh) installed
+- [Node.js](https://nodejs.org) installed
 
 ### Installation
 
 ```bash
-bun install
+npm install
 ```
 
 ### Development
@@ -34,7 +32,7 @@ bun install
 Start the development server:
 
 ```bash
-bun run dev
+npm run dev
 ```
 
 This will:
@@ -47,13 +45,13 @@ The server automatically reloads when you make changes to your code.
 
 ## Scripts
 
-- `bun run dev` - Start development server with hot reload
-- `bun lint` - Lint the codebase
-- `bun run build:css` - Build CSS from Tailwind source
-- `bun run db:push` - Push schema changes to database
-- `bun run db:generate` - Generate migration files
-- `bun run db:migrate` - Run database migrations
-- `bun run db:nuke` - Reset database (deletes database and migrations)
+- `npm run dev` - Start development server with hot reload
+- `npm lint` - Lint the codebase
+- `npm run build:css` - Build CSS from Tailwind source
+- `npm run db:push` - Push schema changes to database
+- `npm run db:generate` - Generate migration files
+- `npm run db:migrate` - Run database migrations
+- `npm run db:nuke` - Reset database (deletes database and migrations)
 
 ## Architecture
 
