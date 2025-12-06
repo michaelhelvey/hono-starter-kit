@@ -25,4 +25,3 @@ export const Layout: FC<{ children: any; theme: Theme }> = ({ children, theme })
     </html>
   </Fragment>
 );
-

@@ -6,6 +6,7 @@
   "scripts": {
     "prepare": "husky",
     "lint": "eslint .",
+    "format": "prettier --write --ignore-unknown .",
     "dev:relay": "node --import tsx src/lib/websocket-relay.ts",
     "dev:app": "node --watch --import tsx src/index.tsx",
     "dev": "run-p dev:relay dev:app",
@@ -50,7 +51,7 @@
     "@testing-library/dom": "10.4.1",
     "@testing-library/jest-dom": "6.9.1",
     "@trivago/prettier-plugin-sort-imports": "6.0.0",
-    "@types/node": "^24.0.0",
+    "@types/node": "24.5.0",
     "dotenv": "17.2.3",
     "drizzle-kit": "0.31.7",
     "eslint": "9.39.1",
@@ -69,11 +70,12 @@
     "vitest": "4.0.13"
   },
   "dependencies": {
-    "@hono/node-server": "1.13.0",
+    "@hono/node-server": "1.14.2",
     "@hono/node-ws": "1.2.0",
     "@libsql/client": "0.15.15",
     "drizzle-orm": "0.44.7",
     "hono": "4.10.6",
+    "uuid": "13.0.0",
     "valibot": "1.2.0"
   },
   "overrides": {

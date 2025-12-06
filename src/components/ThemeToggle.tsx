@@ -22,4 +22,3 @@ export const ThemeToggle: FC<{ theme: Theme }> = ({ theme }) => {
     </div>
   );
 };
-

@@ -13,12 +13,12 @@ export async function seedDatabase(db: DatabaseInstance) {
   await db
     .insert(users)
     .values({
-      name: "John Doe",
-      email: "john.doe@example.com",
+      username: "john.doe",
+      password: "1234",
       createdAt: new Date(),
     })
     .onConflictDoUpdate({
-      target: [users.email],
+      target: [users.username],
       set: {
         createdAt: new Date(),
       },
