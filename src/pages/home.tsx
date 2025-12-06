@@ -33,7 +33,7 @@ export async function homeRoute(c: Context) {
             <ul class="list-disc list-inside">
               {allUsers.map((user) => (
                 <li key={user.id}>
-                  {user.name}: {user.email}
+                  {user.id}: {user.username}
                 </li>
               ))}
             </ul>

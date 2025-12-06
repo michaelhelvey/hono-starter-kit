@@ -7,10 +7,11 @@ import { secureHeaders } from "hono/secure-headers";
 import { appendTrailingSlash } from "hono/trailing-slash";
 import { db } from "./db/index.js";
 import { runMigrations, seedDatabase } from "./db/migrate.js";
+import "./env.js";
 import { notifyLiveReloadListeners } from "./lib/live-reloader.js";
 import { themeToggleRoute } from "./lib/theme.js";
 import { getLogger } from "./logger.js";
-import { apacheLogger, postcssMiddleware } from "./middleware/index.js";
+import { apacheLogger, postcssMiddleware, sessionMiddleware } from "./middleware/index.js";
 import { homeRoute } from "./pages/home.js";
 
 const app = new Hono()
@@ -20,10 +21,14 @@ const app = new Hono()
   .use(secureHeaders())
   .use(postcssMiddleware)
   .use(serveStatic({ root: "./public" }))
+  .use(sessionMiddleware)
   .post("/api/theme/toggle", themeToggleRoute)
   .get("/", homeRoute);
 
 export type AppType = typeof app;
+type InferAppEnv<A> = A extends Hono<infer R> ? R : never;
+export type AppEnv = InferAppEnv<AppType>;
+
 export { app };
 
 if (import.meta.main) {

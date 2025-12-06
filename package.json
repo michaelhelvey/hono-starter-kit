@@ -74,6 +74,7 @@
     "@hono/node-ws": "1.2.0",
     "@libsql/client": "0.15.15",
     "drizzle-orm": "0.44.7",
+    "drizzle-valibot": "0.4.2",
     "hono": "4.10.6",
     "uuid": "13.0.0",
     "valibot": "1.2.0"

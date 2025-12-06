@@ -1,4 +1,5 @@
 import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
+import { createSelectSchema } from "drizzle-valibot";
 import { v7 } from "uuid";
 
 export const users = sqliteTable("users", {
@@ -7,3 +8,5 @@ export const users = sqliteTable("users", {
   password: text("password").notNull(),
   createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
 });
+
+export const userSelectSchema = createSelectSchema(users);
